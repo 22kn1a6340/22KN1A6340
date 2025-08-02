@@ -1,0 +1,33 @@
+Functional Requirements
+The application provides the following core functionalities to the user:
+
+URL Shortening: A user can input any valid long URL into a text field. The system will then generate a short, unique key and a corresponding shortened URL.
+
+Link Redirection: When a user navigates to a shortened URL, the application automatically redirects them to the original, long URL.
+
+Click Tracking: The number of clicks for each shortened URL is tracked and stored. This count is displayed in the application's user interface.
+
+Real-time Data Display: A list of all shortened URLs, their original links, and their click counts is displayed in a table. This table updates in real-time for all users as new URLs are created or as existing ones are clicked.
+
+User Interface: The application features a clean, responsive interface for inputting URLs, viewing the shortened link, and seeing the list of all created links.
+
+Clipboard Integration: A "Copy" button is provided next to the generated short URL, allowing users to quickly copy the link to their clipboard.
+
+Unique User ID: The application assigns an anonymous user ID to each visitor, enabling collaboration and distinguishing contributions (although the current data is public).
+
+2. Technical Requirements
+The project is built with the following technologies and architectural decisions:
+
+Front-end Framework: The entire application is a single-page application (SPA) built using React.js.
+
+Database: Firebase Firestore is used as the back-end database for storing all URL data (long URL, short key, clicks, and creation date).
+
+Authentication: Firebase Authentication is used, with anonymous sign-in to provide each user with a persistent, unique session without requiring them to create an account.
+
+Styling: The user interface is styled using Tailwind CSS for a mobile-first, responsive design.
+
+Client-side Routing: The application uses URL hashes (e.g., /#/shortKey) to handle redirection on the client-side, eliminating the need for a server-side routing configuration.
+
+State Management: The application's state is managed using React's built-in useState and useEffect hooks.
+
+Hosting: The final application can be deployed on any standard web hosting service that supports static files.
